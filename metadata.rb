@@ -1,3 +1,4 @@
+name              'bootstrap'
 maintainer        'Doc Walker'
 maintainer_email  'doc.walker@jameshardie.com'
 license           'Apache 2.0'
