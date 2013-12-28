@@ -7,6 +7,12 @@ desc 'Builds the package for ci server.'
 task :build_ci do
   Rake::Task[:knife_test_ci].execute
   Rake::Task[:foodcritic].execute
+  Rake::Task[:chefspec].execute
+end # task
+
+desc 'Runs foodcritic against the cookbook.'
+task :chefspec do
+  sh 'bundle exec rspec'
 end # task
 
 desc 'Runs foodcritic against the cookbook.'
