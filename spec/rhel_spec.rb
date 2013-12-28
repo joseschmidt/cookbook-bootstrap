@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'bootstrap::rhel' do
   before do
+    # required for travis-ci
     stub_command('sudo -V').and_return(true)
   end # before
   
