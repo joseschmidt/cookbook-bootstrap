@@ -1,0 +1,10 @@
+{
+  "sources": {
+    "bootstrap": {
+      "path": "."
+    },
+    "sudo": {
+      "locked_version": "2.0.4"
+    }
+  }
+}
