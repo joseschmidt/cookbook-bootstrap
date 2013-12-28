@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe 'bootstrap::rhel' do
+  before do
+    stub_command('sudo -V').and_return(true)
+  end # before
+  
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
   
   it 'installs man' do
