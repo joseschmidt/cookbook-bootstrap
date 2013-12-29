@@ -5,7 +5,7 @@ task :default => [:build_ci]
 
 desc 'Builds the package for ci server.'
 task :build_ci do
-  Rake::Task[:knife_test_ci].execute
+  Rake::Task[:knife].execute
   Rake::Task[:foodcritic].execute
   Rake::Task[:chefspec].execute
 end # task
@@ -21,6 +21,6 @@ task :foodcritic do
 end # task
 
 desc 'Runs knife cookbook syntax checks against the cookbook.'
-task :knife_test_ci do
+task :knife do
   sh 'bundle exec knife cookbook test -a -c test/knife.rb'
 end # task
