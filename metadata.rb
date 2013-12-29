@@ -5,4 +5,4 @@ license           'Apache 2.0'
 description       'Bootstraps node'
 
 version           '0.1.0'
-depends           'sudo'
+depends           'sudo', '~> 2.3.0'
