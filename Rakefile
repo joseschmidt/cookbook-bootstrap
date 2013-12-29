@@ -22,5 +22,5 @@ end # task
 
 desc 'Runs knife cookbook syntax checks against the cookbook.'
 task :knife do
-  sh 'bundle exec knife cookbook test -a -c test/knife.rb'
+  sh 'bundle exec knife cookbook test -a -c spec/chef/knife.rb'
 end # task
