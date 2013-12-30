@@ -34,7 +34,7 @@ namespace :foodcritic do
   task :default do
     sh 'bundle exec foodcritic -I spec/foodcritic/* -f any .'
   end # task
-  
+
   desc 'Updates 3rd-party foodcritic rules.'
   task :update do
     sh 'git submodule update --init --recursive'
