@@ -20,7 +20,8 @@ end # task
 
 desc 'Runs foodcritic lint tool against the cookbook.'
 task :foodcritic do
-  sh 'bundle exec foodcritic -f any .'
+  # sh 'git submodule update --init --recursive'
+  sh 'bundle exec foodcritic -I spec/foodcritic/* -f any .'
 end # task
 
 desc 'Runs knife cookbook syntax checks against the cookbook.'
