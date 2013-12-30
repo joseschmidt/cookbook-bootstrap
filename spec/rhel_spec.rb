@@ -6,9 +6,9 @@ describe 'bootstrap::rhel' do
     # required for travis-ci
     stub_command('sudo -V').and_return(true)
   end # before
-  
+
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
-  
+
   it 'installs man' do
     expect(chef_run).to install_package('man')
   end # it
