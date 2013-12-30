@@ -1,0 +1,12 @@
+# This is the configuration used to check the rubocop source code.
+
+AllCops:
+  Includes:
+    - Gemfile
+    - Rakefile
+
+EmptyLines:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false

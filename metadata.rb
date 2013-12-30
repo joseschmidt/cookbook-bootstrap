@@ -1,3 +1,4 @@
+# coding: utf-8
 name              'bootstrap'
 maintainer        'Doc Walker'
 maintainer_email  'doc.walker@jameshardie.com'
