@@ -21,7 +21,7 @@ describe 'bootstrap::rhel' do
   it 'installs which' do
     expect(chef_run).to install_package('which')
   end # it
-  it 'include recipe sudo' do
+  it 'includes recipe sudo' do
     expect(chef_run).to include_recipe('sudo')
   end # it
 end # describe
