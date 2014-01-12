@@ -15,7 +15,7 @@ The following cookbook is a direct dependency because it's used for common "defa
 ### Platforms
 The following platforms are supported and tested under test kitchen:
 
-- CentosOS 5.9, 6.5
+- CentosOS 5.10, 6.5
 
 Other RHEL family distributions are assumed to work.
 
