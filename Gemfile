@@ -11,3 +11,8 @@ group :test do
   gem 'json', '~> 1.7.7'            # required to fix dep res for berks/chef
   gem 'rubocop', '~> 0.16.0'
 end # group
+
+group :integration do
+  gem 'test-kitchen', '~> 1.1.1'
+  gem 'kitchen-vagrant', '~> 0.14.0'
+end # group

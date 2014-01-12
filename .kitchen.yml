@@ -10,9 +10,9 @@ platforms:
   - name: centos-6.5
 
 suites:
-  - name: default
+  - name: rhel
     run_list:
-      - recipe[bootstrap::default]
+      - recipe[bootstrap::rhel]
     attributes:
       authorization:
         sudo:
