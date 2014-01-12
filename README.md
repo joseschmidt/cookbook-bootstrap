@@ -12,7 +12,6 @@ The following cookbook is a direct dependency because it's used for common "defa
 
 - `sudo` (for `bootstrap::rhel`)
 
-
 ### Platforms
 The following platforms are supported and tested under test kitchen:
 
@@ -30,7 +29,7 @@ Recipes
 -------
 This cookbook provides two main recipes for bootstrapping a node.
 
-- `default.rb` - *Use this recipe* and the correct recipe will be included based on the platform family.
+- `default.rb` - *Use this recipe* and the correct recipe is included based on the platform family.
 - `rhel.rb` - *Use this recipe* to specify the RHEL-specific recipe.
 
 ### default
@@ -48,14 +47,14 @@ On client nodes, use the default recipe:
 { "run_list": ["recipe[bootstrap]"] }
 ````
 
-This will install the following packages on the node:
+The following packages are installed on the node:
 
 - `man`
 - `nano`
 - `wget`
 - `which`
 
-Afterward, it will configure `/etc/sudoers` and create the `jeeves` deploy user.
+Afterward, it configures `/etc/sudoers` and creates the `jeeves` deploy user.
 
 
 License & Authors
