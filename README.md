@@ -34,7 +34,7 @@ This cookbook provides two main recipes for bootstrapping a node.
 - `rhel.rb` - *Use this recipe* to specify the RHEL-specific recipe.
 
 ### default
-Theis recipe includes the platform-specific recipe based on the `platform_family` attribute, as reported by the `ohai` plugin.
+This recipe includes the platform-specific recipe based on the `platform_family` attribute, as reported by the `ohai` plugin.
 
 ### rhel
 This recipe performs the RHEL-specific actions.
