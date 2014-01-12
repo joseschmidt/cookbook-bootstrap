@@ -4,29 +4,41 @@ bootstrap Cookbook
 
 Bootstraps a client with user(s) and basic packages.
 
+
 Requirements
 ------------
-- `depends 'sudo', '~> 2.3.0'`
+### Cookbooks
+The following cookbook is a direct dependency because it's used for common "default" functionality.
 
-Platform Family
----------------
-- RHEL, Fedora
+- `sudo` (for `bootstrap::rhel`)
 
-Tested on:
 
-- CentOS
+### Platforms
+The following platforms are supported and tested under test kitchen:
 
-Cookbooks
----------
-Requires Opcode's `sudo` cookbook to configure `/etc/sudoers`.
+- CentosOS 5.9, 6.5
 
-Resources and Providers
------------------------
-None.
+Other RHEL family distributions are assumed to work.
+
 
 Attributes
 ----------
 None.
+
+
+Recipes
+-------
+This cookbook provides two main recipes for bootstrapping a node.
+
+- `default.rb` - *Use this recipe* and the correct recipe will be included based on the platform family.
+- `rhel.rb` - *Use this recipe* to specify the RHEL-specific recipe.
+
+### default
+Theis recipe includes the platform-specific recipe based on the `platform_family` attribute, as reported by the `ohai` plugin.
+
+### rhel
+This recipe performs the RHEL-specific actions.
+
 
 Usage
 -----
@@ -44,6 +56,7 @@ This will install the following packages on the node:
 - `which`
 
 Afterward, it will configure `/etc/sudoers` and create the `jeeves` deploy user.
+
 
 License & Authors
 -----------------
