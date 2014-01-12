@@ -6,7 +6,7 @@ Bootstraps a client with user(s) and basic packages.
 
 Requirements
 ------------
-- `'sudo', '~> 2.3.0'`
+- `depends 'sudo', '~> 2.3.0'`
 
 Platform Family
 ---------------
