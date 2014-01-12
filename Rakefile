@@ -44,8 +44,19 @@ end # namespace
 #----------------------------------------------------------- integration tests
 desc 'Runs test kitchen integration tests against the cookbook.'
 task :kitchen do
-  sh 'bundle exec kitchen test'
+  Rake::Task['kitchen:default'].execute
 end # task
+
+namespace :kitchen do
+  task :default do
+    sh 'bundle exec kitchen test opscode'
+  end # task
+
+  desc 'Runs test kitchen using pre-provisioned vm.'
+  task :fast do
+    sh 'bundle exec kitchen test chef-1182'
+  end # task
+end # namespace
 
 #--------------------------------------------------------------- syntax checks
 desc 'Runs knife cookbook syntax checks against the cookbook.'

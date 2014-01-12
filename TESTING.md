@@ -49,10 +49,10 @@ Development
 
     or run the tests individually:
 
-    - `bundle exec rake:knife`
-    - `bundle exec rake:rubocop`
-    - `bundle exec rake:foodcritic`
-    - `bundle exec rake:chefspec`
-    - `bundle exec kitchen test`
+    - `bundle exec rake knife`
+    - `bundle exec rake rubocop`
+    - `bundle exec rake foodcritic`
+    - `bundle exec rake chefspec`
+    - `bundle exec rake kitchen`
 
 1. Assuming the tests pass, open a Pull Request on GitHub
