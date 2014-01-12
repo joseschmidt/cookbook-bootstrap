@@ -41,6 +41,12 @@ namespace :foodcritic do
   end # task
 end # namespace
 
+#----------------------------------------------------------- integration tests
+desc 'Runs test kitchen integration tests against the cookbook.'
+task :kitchen do
+  sh 'bundle exec kitchen test'
+end # task
+
 #--------------------------------------------------------------- syntax checks
 desc 'Runs knife cookbook syntax checks against the cookbook.'
 task :knife do
