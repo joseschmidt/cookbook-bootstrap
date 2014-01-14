@@ -54,7 +54,7 @@ The following packages are installed on the node:
 - `wget`
 - `which`
 
-Afterward, it configures `/etc/sudoers` and creates the `jeeves` deploy user.
+Afterward, it configures `/etc/sudoers` and `sudo` access for the `jeeves` deploy user.
 
 
 License & Authors
