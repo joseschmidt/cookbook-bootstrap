@@ -62,7 +62,7 @@ Directory structure
 -------------------
 Below is the structure of the test/integration directory:
 
-````ruby
+````text
 .
 ├── spec                                # unit tests
 │   ├── chef
