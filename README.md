@@ -2,7 +2,7 @@ bootstrap Cookbook
 ==================
 [![Build Status](https://travis-ci.org/jhx/cookbook-bootstrap.png?branch=master)](https://travis-ci.org/jhx/cookbook-bootstrap)
 
-Bootstraps a client with user(s) and basic packages.
+Bootstraps a client with basic packages and user privileges.
 
 
 Requirements
