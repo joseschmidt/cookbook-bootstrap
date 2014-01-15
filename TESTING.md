@@ -60,7 +60,7 @@ Development
 
 Directory structure
 -------------------
-Below is the structure of the test/integration directory:
+Below is the structure of the `spec` and `test` directories:
 
 ````text
 .
