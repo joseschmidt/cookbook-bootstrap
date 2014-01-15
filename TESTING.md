@@ -56,3 +56,27 @@ Development
     - `bundle exec rake kitchen`
 
 1. Assuming the tests pass, open a Pull Request on GitHub
+
+
+Directory structure
+-------------------
+Below is the structure of the test/integration directory:
+
+````ruby
+.
+├── spec                                # unit tests
+│   ├── chef
+│   │   └── knife.rb                    # knife configuration
+│   ├── default_spec.rb                 # recipe spec
+│   ├── foodcritic                      # custom foodcritic rules
+│   ├── rhel_spec.rb                    # recipe spec
+│   └── spec_helper.rb
+└── test
+    └── integration                     # integration tests
+        └── rhel                        # suite (based on recipe)
+            ├── bats                    # busser
+            │   └── rhel.bats           # suite test
+            └── serverspec              # busser
+                ├── rhel_spec.rb        # suite spec
+                └── spec_helper.rb
+````
