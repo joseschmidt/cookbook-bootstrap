@@ -62,7 +62,7 @@ License & Authors
 - Author:: Doc Walker (<doc.walker@jameshardie.com>)
 
 ````text
-Copyright 2013-14, James Hardie Building Products, Inc.
+Copyright 2013-2014, James Hardie Building Products, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
