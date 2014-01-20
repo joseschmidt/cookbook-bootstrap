@@ -4,6 +4,7 @@ CHANGELOG
 TBD
 ------------------
 
+- `NEW` add emeril gem to publish cookbook | [#66][]
 - `IMPROVE` update Gemfile to remove redundant gems | [#58][]
 - `IMPROVE` require rspec expect syntax | [#54][] [#56][]
 - `IMPROVE` add rspec for default recipe | [#52][]
@@ -65,3 +66,4 @@ Legend
 [#58]: https://github.com/jhx/cookbook-bootstrap/issues/58
 [#60]: https://github.com/jhx/cookbook-bootstrap/issues/60
 [#62]: https://github.com/jhx/cookbook-bootstrap/issues/62
+[#66]: https://github.com/jhx/cookbook-bootstrap/issues/66
