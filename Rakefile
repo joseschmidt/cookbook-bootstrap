@@ -42,21 +42,15 @@ namespace :foodcritic do
 end # namespace
 
 #----------------------------------------------------------- integration tests
-desc 'Runs test kitchen integration tests against the cookbook.'
-task :kitchen do
-  Rake::Task['kitchen:default'].execute
-end # task
+begin
+  require 'kitchen/rake_tasks'
+  Kitchen::RakeTasks.new
 
-namespace :kitchen do
-  task :default do
-    sh 'bundle exec kitchen test opscode'
-  end # task
-
-  desc 'Runs test kitchen using pre-provisioned vm.'
-  task :fast do
-    sh 'bundle exec kitchen test chef-1182'
-  end # task
-end # namespace
+  desc 'Run all test instances'
+  task :kitchen => ['kitchen:all']
+rescue LoadError
+  STDOUT.puts '[WARN] Kitchen::RakeTasks not loaded'
+end
 
 #--------------------------------------------------------------- syntax checks
 desc 'Runs knife cookbook syntax checks against the cookbook.'
