@@ -27,9 +27,9 @@ platforms:
       box: opscode-centos-6.5-chef-11.8.2
 
 suites:
-  - name: rhel
+  - name: bootstrap
     run_list:
-      - recipe[bootstrap::rhel]
+      - 'recipe[bootstrap::rhel]'
     attributes:
       authorization:
         sudo:
