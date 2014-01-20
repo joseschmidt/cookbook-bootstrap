@@ -13,11 +13,11 @@ The following cookbook is a direct dependency because it's used for common "defa
 - `sudo` (for `bootstrap::rhel`)
 
 ### Platforms
-The following platforms are supported and tested under test kitchen:
+The following platforms are supported and tested under Test Kitchen:
 
 - CentosOS 5.10, 6.5
 
-Other RHEL family distributions are assumed to work.
+Other RHEL family distributions are assumed to work. See [TESTING](TESTING.md) for information about running tests in Opscode's Test Kitchen.
 
 
 Attributes
