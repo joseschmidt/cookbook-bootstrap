@@ -19,7 +19,7 @@ describe 'bootstrap::rhel' do
   end # it
 
   it 'configures /etc/sudoers' do
-    expect(file('/etc/sudoers').content).to match(/PATH SSH_AUTH_SOCK/)
+    expect(file('/etc/sudoers').content).to include('PATH SSH_AUTH_SOCK')
   end # it
 
   it 'configures /etc/sudoers.d/jeeves' do
