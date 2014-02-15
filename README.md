@@ -1,7 +1,7 @@
 bootstrap Cookbook
 ==================
 [![Build Status](https://travis-ci.org/jhx/cookbook-bootstrap.png?branch=master)](https://travis-ci.org/jhx/cookbook-bootstrap)
-[![Dependency Status](https://gemnasium.com/jhx/cookbook-bash.png)](https://gemnasium.com/jhx/cookbook-bash)
+[![Dependency Status](https://gemnasium.com/jhx/cookbook-bootstrap.png)](https://gemnasium.com/jhx/cookbook-bootstrap)
 
 Bootstraps a client with basic packages and user privileges.
 
