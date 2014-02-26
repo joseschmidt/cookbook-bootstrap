@@ -9,19 +9,34 @@ describe 'bootstrap::rhel' do
 
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
-  it 'installs man' do
-    expect(chef_run).to install_package('man')
-  end # it
-  it 'installs nano' do
-    expect(chef_run).to install_package('nano')
-  end # it
-  it 'installs wget' do
-    expect(chef_run).to install_package('wget')
-  end # it
-  it 'installs which' do
-    expect(chef_run).to install_package('which')
-  end # it
-  it 'includes recipe sudo' do
-    expect(chef_run).to include_recipe('sudo')
-  end # it
+  describe 'man' do
+    it 'includes described package' do
+      expect(chef_run).to install_package(subject)
+    end # it
+  end # describe
+
+  describe 'nano' do
+    it 'includes described package' do
+      expect(chef_run).to install_package(subject)
+    end # it
+  end # describe
+
+  describe 'wget' do
+    it 'includes described package' do
+      expect(chef_run).to install_package(subject)
+    end # it
+  end # describe
+
+  describe 'which' do
+    it 'includes described package' do
+      expect(chef_run).to install_package(subject)
+    end # it
+  end # describe
+
+  describe 'sudo' do
+    it 'includes described recipe' do
+      expect(chef_run).to include_recipe(subject)
+    end # it
+  end # describe
+
 end # describe

@@ -15,9 +15,12 @@ describe 'bootstrap::default' do
         end.converge(described_recipe)
       end # let
 
-      it 'includes recipe' do
-        expect(chef_run).to include_recipe('bootstrap::rhel')
-      end # it
+      describe 'bootstrap::rhel' do
+        it 'includes described recipe' do
+          expect(chef_run).to include_recipe(subject)
+        end # it
+      end # describe
+
     end # describe
   end # %()
 
@@ -29,9 +32,12 @@ describe 'bootstrap::default' do
         end.converge(described_recipe)
       end # let
 
-      it 'does not include recipe' do
-        expect(chef_run).to_not include_recipe('bootstrap::rhel')
-      end # it
+      describe 'bootstrap::rhel' do
+        it 'does not include recipe' do
+          expect(chef_run).to_not include_recipe(subject)
+        end # it
+      end # describe
+
     end # describe
   end # %()
 end # describe
