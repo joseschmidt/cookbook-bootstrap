@@ -11,7 +11,7 @@ Requirements
 ### Cookbooks
 The following cookbook is a direct dependency because it's used for common "default" functionality.
 
-- `sudo` (for `bootstrap::rhel`)
+- [`sudo`](https://github.com/opscode-cookbooks/sudo) (for `bootstrap::rhel`)
 
 ### Platforms
 The following platforms are supported and tested under Test Kitchen:
