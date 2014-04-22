@@ -2,28 +2,72 @@
 require 'spec_helper'
 
 describe 'bootstrap::rhel' do
-  it 'installs man' do
-    expect(package 'man').to be_installed
-  end # it
+  describe package('man') do
+    it 'installs described package' do
+      expect(subject).to be_installed
+    end # it
+  end # describe
 
-  it 'installs nano' do
-    expect(package 'nano').to be_installed
-  end # it
+  describe package('nano') do
+    it 'installs described package' do
+      expect(subject).to be_installed
+    end # it
+  end # describe
 
-  it 'installs wget' do
-    expect(package 'wget').to be_installed
-  end # it
+  describe package('wget') do
+    it 'installs described package' do
+      expect(subject).to be_installed
+    end # it
+  end # describe
 
-  it 'installs which' do
-    expect(package 'which').to be_installed
-  end # it
+  describe package('which') do
+    it 'installs described package' do
+      expect(subject).to be_installed
+    end # it
+  end # describe
 
-  it 'configures /etc/sudoers' do
-    expect(file('/etc/sudoers').content).to include('PATH SSH_AUTH_SOCK')
-  end # it
+  describe file('/etc/sudoers') do
+    it 'is a file' do
+      expect(subject).to be_file
+    end # it
 
-  it 'configures /etc/sudoers.d/jeeves' do
-    expect(file('/etc/sudoers.d/jeeves').content)
-      .to match(/^jeeves\s.*NOPASSWD:ALL$/)
-  end # it
+    it 'is owned by root' do
+      expect(subject).to be_owned_by('root')
+    end # it
+
+    it 'is in group root' do
+      expect(subject).to be_grouped_into('root')
+    end # it
+
+    it 'is mode 440' do
+      expect(subject).to be_mode(440)
+    end # it
+
+    it 'includes expected content' do
+      expect(subject.content).to include('PATH SSH_AUTH_SOCK')
+    end # it
+  end # describe
+
+  describe file('/etc/sudoers.d/jeeves') do
+    it 'is a file' do
+      expect(subject).to be_file
+    end # it
+
+    it 'is owned by root' do
+      expect(subject).to be_owned_by('root')
+    end # it
+
+    it 'is in group root' do
+      expect(subject).to be_grouped_into('root')
+    end # it
+
+    it 'is mode 440' do
+      expect(subject).to be_mode(440)
+    end # it
+
+    it 'matches expected content' do
+      expect(subject.content).to match(/^jeeves\s.*NOPASSWD:ALL$/)
+    end # it
+  end # describe
+
 end # describe
