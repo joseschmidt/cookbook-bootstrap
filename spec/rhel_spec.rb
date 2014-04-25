@@ -10,25 +10,25 @@ describe 'bootstrap::rhel' do
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
   describe 'man' do
-    it 'includes described package' do
+    it 'installs described package' do
       expect(chef_run).to install_package(subject)
     end # it
   end # describe
 
   describe 'nano' do
-    it 'includes described package' do
+    it 'installs described package' do
       expect(chef_run).to install_package(subject)
     end # it
   end # describe
 
   describe 'wget' do
-    it 'includes described package' do
+    it 'installs described package' do
       expect(chef_run).to install_package(subject)
     end # it
   end # describe
 
   describe 'which' do
-    it 'includes described package' do
+    it 'installs described package' do
       expect(chef_run).to install_package(subject)
     end # it
   end # describe
